@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml"   
+       xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:pou="http://primefaces.org/ui"
+       xmlns:f="http://xmlns.jcp.org/jsf/core" 
+       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:include src="videoViewPgEditingBrw-Style.xhtml" />
+    <ui:include src="jvp-TOP.xhtml" />
+   
+ <pou:outputPanel deferred="true" style=" text-align:  left">
+        <pou:outputLabel  style=" font-size: 14px;position:relative; text-align:  center">
+            Chad Hayden (Host) and Scott Pereira (Certified Cicerone®)
+        </pou:outputLabel>
+        <br/>
+        <pou:outputLabel  style=" font-size: 14px;position:relative; text-align:  center">
+            Film @ Little Neck beverage, 973 Northern Blvd, Great Neck, NY 11021
+        </pou:outputLabel>
+        <br/>
+         <pou:commandButton value="Back"  action="#{playingvideoObject.back()}" style=" font-size: 12px" />
+    </pou:outputPanel>
+    <br/>
+    <pou:panelGrid style="margin:0px 0px;  background:  transparent; background-color:  transparent; padding: 0" 
+                   styleClass="noBorder"         >
+
+
+
+        <pou:row style=";padding:0px">
+            <pou:column colspan="1" style=";padding:0px" >
+
+                <pou:media  id="videoPlayer_sport"     
+                            value="#{playingvideoObject.videoBean.videoURL}?vq=hd1080"
+                            width="700" 
+                            height="450"
+                            player="#{playingvideoObject.videoBean.videoPlayer}"/>
+            </pou:column>
+
+        </pou:row>
+        <pou:row style=";padding:0px">
+            <pou:column style=";padding:0px">
+                <pou:commandButton value="Back"  action="#{playingvideoObject.back()}" style=" font-size: 12px" />
+            </pou:column>
+        </pou:row>
+
+
+    </pou:panelGrid>
+
+
+
+
+
+
+</html>
